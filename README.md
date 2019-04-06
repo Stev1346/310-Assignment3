@@ -82,8 +82,13 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 
 <h3>Tasks Completed:</h3>
 1. Spell checker can be found under `spelling.py`
+
 2. POS Tagging implemeneted in `convoDemo.py`
+
 3. Separate spell checker method using `import symspellpy as symspellpy`
+
 4. Five new responses added to `convo.dat` to give alternate responses when topics are out of range
+
 5. Added new topic of school to `convo.dat`
+
 6. 
