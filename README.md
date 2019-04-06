@@ -81,6 +81,7 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 7. Allow wildcards in topic keywords (eg, 'fav*' matches fave, favorite, and favourite)
 
 <h3>Tasks Completed:</h3>
+
 1. Spell checker can be found under `spelling.py`
 
 2. POS Tagging implemeneted in `convoDemo.py`
