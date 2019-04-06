@@ -5,6 +5,21 @@ Awesome!
 ?*
 I'm sorry, I didn't understand that.
 
+?*
+I'm sorry that is above my pay grade.
+
+?*
+Sorry that's out of my scope of topic
+
+?*
+Sorry I don't think I can help with that
+
+?*
+Sorry that is classified
+
+?*
+Sorry I don't have high enough clearance for that
+
 .hi/hello/hey
 Hi, nice to meet you! My name's Charles. What's your name?^name.NNP
 I like that name, $name!
@@ -83,3 +98,25 @@ I don't have any pets, but I love dogs! Do you have any pets?+
 0You can always adopt one!
 I think pets make the best companions. Besides me, of course!
 
+?do/will&you&go&to&school
+No I don't go to school as I am a robot. Do you go to school?+
++Nice! School is very good!
+-That's not good. You really should go.
+0I guess that's fair
+
+?are&you&a&student
+Well I'm clearly a computer, so I wanna say no? Are you a student?
++That's nice. I bet I can guess your faculty.
+-So I'm guessing you work.
+0So you don't do anything.
+
+?guess
+I'm gonna guess science?
++Yes! I could just tell we had some chemistry ;)
+-Darn! I totally thought I had it
+
+?I&do&work
+Nice. Do you like your job?
++That's always good. A wise man once said if you love your job you'll never work a day in your life.. or something like that
+-I'm sorry. I hope you find a better one or you start to like this one.
+0It pays the bills.

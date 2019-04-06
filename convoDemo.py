@@ -4,19 +4,26 @@
 # NLTK wordnet
 # NLTK vader_lexicon
 # NLTK averaged_perceptron_tagger
+
+
+import symspellpy as symspellpy
+import pip
+
 import nltk as nltk
 
 
 import string
 import nltk
 import pickle
-import spelling
+
 
 from nltk.tag import pos_tag
 from nltk.tokenize import PunktSentenceTokenizer
 from nltk.tokenize import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from spellchecker import SpellChecker
+
 
 convoFile = open("convo.dat", "r")
 topic = 0 #current topic
@@ -26,6 +33,7 @@ saveAnswer = False #whether to expect an answer to put into 'memory'
 posNext = False #whether to expect an answer where positivity level must be determined
 lastAnswer = "" #holds last saved answer variable (eg, 'name')
 lastType = "" #holds word type of expected answer (eg, 'NNP' [proper noun])
+spell = SpellChecker() #Spellchecker
 
 #try to get word stem
 def lemma(word):
@@ -125,19 +133,6 @@ def topicContinues():
 	else:
 		return True
 
-#get a line by line number
-#def getLine(lineNumber):
-#	convoFile.seek(0)
-#	for i, line in convoFile:
-#		if i == lineNumber-1:
-#			return line
-
-#get a line by string search
-#def findLine(str):
-#	convoFile.seek(0)
-#	for line in convoFile:
-#		if str in line:
-#			return line
 
 #get a line by topic number (and sequence number if specified)
 def getTopic(sequence=2):
@@ -281,6 +276,15 @@ def getResponse(uIn=""):
 # Start of conversation
 uIn = "" #user input variable
 print("[Say hi!]\n\n")
+
+#spell checker method
+def spellChecker(uIn):
+	misspelled = spell.unknown(uIn)
+
+	for word in misspelled:
+		uIn = spell.correction(word)
+		return uIn
+
 
 while "bye" not in uIn and "exit" not in uIn: #exit conversation when user input contains "bye" or "exit"
 	if uIn != "": #make sure input isn't blank
