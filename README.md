@@ -92,4 +92,4 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 
 5. Added new topic of school to `convo.dat`
 
-6. 
+6. Sentiment analysis tool implemented in `convoDemo.py`
