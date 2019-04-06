@@ -1,0 +1,12 @@
+topFrame = Frame(root)
+topFrame.pack()
+bottomFrame = Frame(root)
+bottomFrame.pack(side=BOTTOM)
+
+sendButton = Button(bottomFrame, text="Send", fg="blue")
+sendButton.pack(side=RIGHT)
+
+chatSpace = Label(root, text = "Hi", bg="white",fg="Red")
+chatSpace.pack(fill=X)
+chatSpace.pack(fill=Y)
+
