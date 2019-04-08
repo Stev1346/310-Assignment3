@@ -1,12 +1,44 @@
+root = Tk()
+root.title("Charles the Chatbot")
+
 topFrame = Frame(root)
 topFrame.pack()
-bottomFrame = Frame(root)
-bottomFrame.pack(side=BOTTOM)
+botFrame = Frame(root)
+botFrame.pack(side=BOTTOM)
 
-sendButton = Button(bottomFrame, text="Send", fg="blue")
+
+
+sendButton = Button(botFrame, text="Send", fg="blue")
 sendButton.pack(side=RIGHT)
 
 chatSpace = Label(root, text = "Hi", bg="white",fg="Red")
 chatSpace.pack(fill=X)
 chatSpace.pack(fill=Y)
 
+rep = StringVar()
+textbox =ttk.Entry(width = 205, textvariable=rep)
+
+
+
+root = Tk()
+root.geometry("1280x720+0+0")
+root.title("Charles the Chatbot")
+
+topFrame = Frame(root,height =600,width=1280,bg ="blue",cursor = "dot",borderwidth=5,relief="groove").grid(row=0,column=0)
+botFrame = Frame(root,height=80,width=1280,bg="red",bd=11,relief=SUNKEN).grid(row=1,column=0)
+
+rep = StringVar()
+textbox =ttk.Entry(width = 195, textvariable=rep).grid(row=1,column=0)
+
+sendButton = Button(botFrame, text="Send", fg="blue").grid(row=1,column=0)
+
+
+
+sendButton = Button(botFrame, text="Send", fg="green").grid(row=1, column=1)
+
+chatSpace = Label(root, text="Hi", bg="black", fg="Red")
+chatSpace.pack(fill=X)
+chatSpace.pack(fill=Y)
+
+textInput = tkinter.Entry(botFrame)
+textInput.grid(row=1, column=0)

@@ -1,25 +1,54 @@
+import tkinter
+from _multiprocessing import send
 from tkinter import *
 from tkinter import ttk
-import convoDemo.py
+
 from tkinter import messagebox
 from tkinter import scrolledtext
 
-with open('sent_tokenizer.pickle', 'rb') as f:
-    sent_tokenizer=pickle.load(f)
-
-sub = ""
+from socket import AF_INET, socket, SOCK_STREAM
+from threading import Thread
 
 root = Tk()
-root.geometry("1280x720+0+0")
+
+root.resizable(0,0)
 root.title("Charles the Chatbot")
 
-topFrame = Frame(root,height =600,width=1280,bg ="blue",cursor = "dot",borderwidth=5,relief="groove").grid(row=0,column=0)
-botFrame = Frame(root,height=80,width=1280,bg="red",bd=11,relief=SUNKEN).grid(row=1,column=0)
+topFrame = Frame(root)
+topFrame.pack()
+botFrame = Frame(root, width=400, height=75)
+botFrame.pack(side=BOTTOM)
 
-rep = StringVar()
-textbox = ttk.Entry(width = 205, textvariable=rep).grid(row=1, column=0, sticky=W, padx=15)
+msgFrame = tkinter.Frame(topFrame)
+myMsg = tkinter.StringVar()
+myMsg.set("")
+scrollbar = tkinter.Scrollbar(msgFrame)
 
+msgList = tkinter.Listbox(msgFrame, height =15, width = 50, yscrollcommand=scrollbar.set)
+scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+msgList.pack(side=tkinter.LEFT,fill=tkinter.BOTH)
+msgList.pack()
 
+msgFrame.pack()
 
+msgInput = tkinter.Entry(root, textvariable=myMsg)
+msgInput.bind("<Return>",send)
+msgInput.pack()
+sendButton = tkinter.Button(root, text="Send", command = send)
+sendButton.pack()
+
+def send(event=None):
+    myMsg = "You: " + msgInput.get()
+
+    if myMsg == "{quit}" or 'bye' in myMsg:
+        root.quit()
+    else:
+        call()
+        msgList.insert(END, myMsg)
+        msgList.yview(END)
+        msgInput.delete(0, 'end')
+
+def call(event=None):
+    print(msgInput.get())
 
 root.mainloop()

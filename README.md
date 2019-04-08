@@ -62,6 +62,9 @@ Can't both save an answer and determine the positivity of a single user response
 
 If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `-`, and `0`.
 
+Sometimes, the chatbot doesn't recognize the `guess` statement and responds with a blank line requiring user to send another message
+
+GUI displays but doesn't interact with the chatbot. Also doesn't show text inputted.
 
 
 <h3>Potential Updates:</h3>
@@ -93,3 +96,13 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 5. Added new topic of school to `convo.dat`
 
 6. Sentiment analysis tool implemented in `convoDemo.py`
+
+<h3>Extractable API Features:</h3>
+
+1. Spell Checker
+
+2. Named Entity Recognition
+
+3. Sentiment Analysis Tool
+
+4. 
