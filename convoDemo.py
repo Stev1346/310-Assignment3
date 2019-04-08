@@ -304,7 +304,7 @@ while "bye" not in uIn and "exit" not in uIn:  # exit conversation when user inp
     uIn = input()
     print()
 
-printResponse("See you soon!")
+printResponse("See you soon! Ten afternoon!!")
 
 exit()
 

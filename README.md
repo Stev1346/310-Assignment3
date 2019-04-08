@@ -84,18 +84,19 @@ GUI displays but doesn't interact with the chatbot. Also doesn't show text input
 7. Allow wildcards in topic keywords (eg, 'fav*' matches fave, favorite, and favourite)
 
 <h3>Tasks Completed:</h3>
+NOTE: All images are in the folder along with their names.
 
-1. Spell checker 
+1. Spell checker: works behind the scenes to maintain the flow of conversation regardless of common typographical errors or spellingmistakes 
 
-2. POS Tagging 
+2. POS Tagging:  Useful for allowing the chatbot to extract useful information from the user's input
 
 3. Five new responses added to `convo.dat` to give alternate responses when topics are out of range
 
 4. Added new topic to `convo.dat`: Added new topic about being a student or working 
 
-5. Sentiment analysis tool implemented in `convoDemo.py`
+5. Sentiment analysis tool implemented to distinguish between posisitve and negative responses
 
-6. GUI framework
+6. GUI framework: Shows a more user friendly chat space to interact with the chatbot
 
 <h3>Extractable API Features:</h3>
 
