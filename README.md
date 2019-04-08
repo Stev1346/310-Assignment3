@@ -85,17 +85,17 @@ GUI displays but doesn't interact with the chatbot. Also doesn't show text input
 
 <h3>Tasks Completed:</h3>
 
-1. Spell checker can be found under `spelling.py`
+1. Spell checker 
 
-2. POS Tagging implemeneted in `convoDemo.py`
+2. POS Tagging 
 
-3. Separate spell checker method using `import symspellpy as symspellpy`
+3. Five new responses added to `convo.dat` to give alternate responses when topics are out of range
 
-4. Five new responses added to `convo.dat` to give alternate responses when topics are out of range
+4. Added new topic to `convo.dat`: Added new topic about being a student or working 
 
-5. Added new topic of school to `convo.dat`
+5. Sentiment analysis tool implemented in `convoDemo.py`
 
-6. Sentiment analysis tool implemented in `convoDemo.py`
+6. GUI framework
 
 <h3>Extractable API Features:</h3>
 
@@ -105,4 +105,9 @@ GUI displays but doesn't interact with the chatbot. Also doesn't show text input
 
 3. Sentiment Analysis Tool
 
-4. 
+4. POS Tagging
+
+5. GUI
+
+<h3>Inability to handle conversation:</h3>
+See photos in the folder for photos of chat where the chatbot couldn't handle the conversation
